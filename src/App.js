@@ -13,6 +13,8 @@ function App() {
   const dispatch = useDispatch();
   const userName = useSelector(selectUserName);
   const userEmail = useSelector(selectUserEmail);
+  const handleSignIn = () => {};
+  const handleSignOut = () => {};
   return (
     <div>
       <img src="https://www.outsystems.com/forge/DownloadResource.aspx?FileName=&ImageBinaryId=43951"></img>
