@@ -10,6 +10,7 @@ import {
   setUserLogOut,
 } from "./features/userSlice";
 function App() {
+  const dispatch = useDispatch();
   return (
     <div>
       <img src="https://www.outsystems.com/forge/DownloadResource.aspx?FileName=&ImageBinaryId=43951"></img>
