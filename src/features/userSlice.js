@@ -13,6 +13,10 @@ const userSlice = createSlice({
       state.userName = action.payload.userName;
       state.userEmail = action.payload.userEmail;
     },
+    setUserLogout: (state, action) => {
+      state.userName = null;
+      state.userEmail = null;
+    },
   },
 });
 
