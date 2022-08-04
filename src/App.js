@@ -35,7 +35,7 @@ function App() {
       });
   };
   return (
-    <div>
+    <div className="App">
       <img src="https://www.outsystems.com/forge/DownloadResource.aspx?FileName=&ImageBinaryId=43951"></img>
 
       {userName ? (
