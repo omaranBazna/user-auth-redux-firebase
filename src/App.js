@@ -39,7 +39,11 @@ function App() {
       <img src="https://www.outsystems.com/forge/DownloadResource.aspx?FileName=&ImageBinaryId=43951"></img>
 
       {userName ? (
-        <button onClick={handleSignOut}>Sign Out</button>
+        <>
+          <div className="st">Name : {userName}</div>
+          <div className="st">Email : {userEmail}</div>
+          <button onClick={handleSignOut}>Sign Out</button>
+        </>
       ) : (
         <button onClick={handleSignIn}>Sign In</button>
       )}
