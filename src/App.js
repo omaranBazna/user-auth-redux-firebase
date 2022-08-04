@@ -10,6 +10,7 @@ import {
   setUserLogOut,
 } from "./features/userSlice";
 import { signOut, signInWithPopup, signInWithRedirect } from "firebase/auth";
+import Header from "./components/Header";
 function App() {
   const dispatch = useDispatch();
   const userName = useSelector(selectUserName);
@@ -36,6 +37,7 @@ function App() {
   };
   return (
     <div className="App">
+      <Header />
       <img src="https://www.outsystems.com/forge/DownloadResource.aspx?FileName=&ImageBinaryId=43951"></img>
 
       {userName ? (
