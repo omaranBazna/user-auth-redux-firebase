@@ -9,6 +9,7 @@ import {
   setActiveUser,
   setUserLogOut,
 } from "./features/userSlice";
+
 function App() {
   const dispatch = useDispatch();
   const userName = useSelector(selectUserName);
