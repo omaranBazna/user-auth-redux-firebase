@@ -1,7 +1,7 @@
 import React from "react";
 
 import "./App.css";
-import { auth, provider, signOut } from "./firebase";
+import { auth, provider, signOut, signInWithPopup } from "./firebase";
 import { useDispatch, useSelector } from "react-redux";
 import {
   selectUserEmail,
@@ -14,7 +14,16 @@ function App() {
   const dispatch = useDispatch();
   const userName = useSelector(selectUserName);
   const userEmail = useSelector(selectUserEmail);
-  const handleSignIn = () => {};
+  const handleSignIn = () => {
+    signInWithPopup(provider).then((result) => {
+      dispatch(
+        setActiveUser({
+          userName: result.user.displayName,
+          userEmail: result.user.email,
+        })
+      );
+    });
+  };
   const handleSignOut = () => {
     signOut()
       .then(() => {
