@@ -1,7 +1,7 @@
 import React from "react";
 
 import "./App.css";
-import { auth, provider } from "./firebase";
+import { auth, provider, signOut } from "./firebase";
 import { useDispatch, useSelector } from "react-redux";
 import {
   selectUserEmail,
@@ -15,7 +15,11 @@ function App() {
   const userName = useSelector(selectUserName);
   const userEmail = useSelector(selectUserEmail);
   const handleSignIn = () => {};
-  const handleSignOut = () => {};
+  const handleSignOut = () => {
+    signOut().then(() => {
+      dispatch(setUserLogOut);
+    });
+  };
   return (
     <div>
       <img src="https://www.outsystems.com/forge/DownloadResource.aspx?FileName=&ImageBinaryId=43951"></img>
