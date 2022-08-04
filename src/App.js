@@ -16,9 +16,13 @@ function App() {
   const userEmail = useSelector(selectUserEmail);
   const handleSignIn = () => {};
   const handleSignOut = () => {
-    signOut().then(() => {
-      dispatch(setUserLogOut);
-    });
+    signOut()
+      .then(() => {
+        dispatch(setUserLogOut);
+      })
+      .catch((e) => {
+        console.log(e);
+      });
   };
   return (
     <div>
